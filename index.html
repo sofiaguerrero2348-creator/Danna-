@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simplee: moda con estilo. Descubre nuestro vestido naranja y la campaña de temporada.">
+  <meta name="theme-color" content="#a9432d">
+  <title>Simplee | Moda con estilo</title>
+  <link rel="preload" as="image" href="assets/campana-vestido-naranja.webp">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">
+    <span>ENVÍO GRATIS EN PEDIDOS SELECCIONADOS</span>
+    <span class="announcement-offer">20% OFF en compras superiores a $125</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Simplee, inicio">Simplee<span>®</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#coleccion">Colección</a>
+      <a href="#producto">Producto</a>
+      <a href="#nosotros">Nosotros</a>
+      <a class="nav-cta" href="#producto">Descubrir</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">NUEVA TEMPORADA · SIMPLEE</p>
+        <h1>Un estilo que habla <em>por ti.</em></h1>
+        <p class="hero-description">Prendas que combinan comodidad, movimiento y personalidad. Descubre una propuesta pensada para acompañarte en cada momento.</p>
+        <a class="button" href="#producto">Conoce la colección <span aria-hidden="true">→</span></a>
+        <p class="small-note">Diseño, confianza y estilo en cada detalle.</p>
+      </div>
+      <div class="hero-image-wrap">
+        <img class="hero-image" src="assets/campana-vestido-naranja.webp" alt="Campaña de moda Simplee con un vestido naranja de mangas amplias" width="1500" height="1125">
+        <span class="image-label">COLECCIÓN DESTACADA</span>
+      </div>
+    </section>
+
+    <section class="intro" id="coleccion">
+      <p class="eyebrow">LA ESENCIA SIMPLEE</p>
+      <h2>Menos complicaciones.<br><em>Más estilo.</em></h2>
+      <p>Una presentación visual limpia permite que cada prenda sea protagonista. Nuestra campaña destaca el color, la textura y los detalles del diseño.</p>
+    </section>
+
+    <section class="product-section" id="producto">
+      <div class="product-image">
+        <img src="assets/campana-vestido-naranja.webp" alt="Detalle del vestido naranja de la campaña Simplee" loading="lazy">
+      </div>
+      <div class="product-copy">
+        <p class="eyebrow">PIEZA DESTACADA</p>
+        <h2>El vestido que transforma tu look.</h2>
+        <p>Un diseño en tono naranja terracota, con escote en V, cintura recogida y mangas amplias. Una prenda llamativa que conserva una apariencia elegante y cómoda.</p>
+        <ul class="features">
+          <li>Color naranja terracota</li>
+          <li>Detalle fruncido en la cintura</li>
+          <li>Mangas amplias y fluidas</li>
+        </ul>
+        <a class="text-link" href="#contacto">Solicitar información <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="values" id="nosotros">
+      <div><span>01</span><h3>Diseño cuidado</h3><p>Una imagen clara y coherente en cada publicación.</p></div>
+      <div><span>02</span><h3>Estilo auténtico</h3><p>Prendas que resaltan por sus detalles y personalidad.</p></div>
+      <div><span>03</span><h3>Experiencia simple</h3><p>Navegación sencilla desde computadores y celulares.</p></div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <p class="eyebrow">DESCUBRE SIMPLEE</p>
+      <h2>Tu próximo look comienza aquí.</h2>
+      <p>Conoce la campaña y consulta los detalles de la colección.</p>
+      <a class="button button-light" href="mailto:hola@simplee.example?subject=Informaci%C3%B3n%20de%20la%20colecci%C3%B3n">Contactar</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#inicio">Simplee<span>®</span></a>
+    <p>Campaña digital de demostración · Proyecto académico</p>
+    <a href="#inicio">Volver arriba ↑</a>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
